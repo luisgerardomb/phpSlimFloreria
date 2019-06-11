@@ -5,7 +5,8 @@
     class EmpleadosController extends Controllers{
 
         function selectEmpleados($request, $response){
-            $msg = $this->EmpleadosModel->selectEmpleados();
+            $id = $request->getAttribute('id');
+            $msg = $this->EmpleadosModel->selectEmpleados($id);
 
             return json_encode($msg);
         }

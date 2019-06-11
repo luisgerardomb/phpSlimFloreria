@@ -3,5 +3,14 @@
 
     $container['EmpleadosController'] = function($container){
         return new app\controllers\EmpleadosController($container);
+    };
+
+    $container['ProductosController'] = function($container){
+        return new app\controllers\ProductosController($container);
+    };
+
+    $container['OficinasController'] = function($container){
+        return new app\controllers\OficinasController($container);
     }
+
 ?>

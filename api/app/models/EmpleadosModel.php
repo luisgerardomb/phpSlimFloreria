@@ -2,11 +2,14 @@
     namespace app\models;
 
     class EmpleadosModel extends Models{
-        function selectEmpleados(){
+        function selectEmpleados($id){
 
             $cons = $this->db->pdo->prepare('SELECT codigo_empleado, nombre, apellido1, apellido2, extension, email, oficina.ciudad, codigo_jefe, puesto
             FROM empleado
-            LEFT JOIN  oficina ON empleado.codigo_oficina = oficina.codigo_oficina');
+            LEFT JOIN  oficina ON empleado.codigo_oficina = oficina.codigo_oficina
+            WHERE codigo_empleado = :id');
+
+            $cons->bindParam(':id', $id, \PDO::PARAM_INT);
 
             $cons->execute();
 

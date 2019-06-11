@@ -1,5 +1,5 @@
 <?php
-    $app->get('/empleados', 'EmpleadosController:selectEmpleados');
+    $app->get('/empleados/{id}', 'EmpleadosController:selectEmpleados');
 
     $app->post('/empleados', 'EmpleadosController:insertEmpleados');
 
