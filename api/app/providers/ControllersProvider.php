@@ -15,6 +15,10 @@
 
     $container['PedidosController'] = function($container){
         return new app\controllers\PedidosController($container);
+    };
+
+    $container['ClientesController'] = function($container){
+        return new app\controllers\ClientesController($container);
     }
 
 ?>

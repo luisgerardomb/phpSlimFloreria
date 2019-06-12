@@ -14,4 +14,8 @@
     $container['PedidosModel'] = function($container){
         return new app\models\PedidosModel($container);
     };
+
+    $container['ClientesModel'] = function($container){
+        return new app\models\ClientesModel($container);
+    }
 ?>
