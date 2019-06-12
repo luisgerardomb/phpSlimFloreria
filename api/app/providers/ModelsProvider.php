@@ -9,5 +9,9 @@
 
     $container['OficinasModel'] = function($container){
         return new app\models\OficinasModel($container);
-    }
+    };
+
+    $container['PedidosModel'] = function($container){
+        return new app\models\PedidosModel($container);
+    };
 ?>
