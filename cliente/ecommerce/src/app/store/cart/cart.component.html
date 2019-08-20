@@ -9,6 +9,7 @@
             <thead class="thead-dark">
                 <tr>
                     <th>Nombre</th>
+                    <th>Categoria</th>
                     <th>Cantidad</th>
                     <th>Precio unitario</th>
                     <th>Subtotal</th>
@@ -17,6 +18,7 @@
             <tbody>
                 <tr *ngFor="let line of Lines">
                     <td>{{line.producto.nombre}}</td>
+                    <td>{{line.producto.gama}}</td>
                     <td>
                         <input class="form-control" type="number" value="{{line.cantidad}}"
                             (change)="updateLine(line.producto, $event.target.value)">
