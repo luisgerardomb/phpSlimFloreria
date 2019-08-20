@@ -1,0 +1,13 @@
+<ul class="navbar-nav nav-flex-icons">
+    <li class="nav-item">
+        <a class="nav-link waves-effect" *ngIf="cart.itemCount > 0; else Show">
+            <span class="badge red z-depth-1 mr-1"> {{cart.itemCount}} </span>
+            <i class="fas fa-shopping-cart"></i>
+        </a>
+        <ng-template #Show>
+            <span class="badge red z-depth-1 mr-1"> {{cart.itemCount}} </span>
+            <i class="fa fa-shopping-cart"></i>
+            <span class="clearfix d-none d-sm-inline-block"> (empty) </span>
+        </ng-template>
+    </li>
+</ul>

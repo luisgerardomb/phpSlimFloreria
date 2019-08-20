@@ -1,0 +1,45 @@
+<app-nav></app-nav>
+<br>
+<br>
+<br>
+<div class="container">
+    <br>
+    <div class="row">
+        <table class="table table-hover">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Precio unitario</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let line of Lines">
+                    <td>{{line.producto.nombre}}</td>
+                    <td>
+                        <input class="form-control" type="number" value="{{line.cantidad}}"
+                            (change)="updateLine(line.producto, $event.target.value)">
+                    </td>
+                    <td>{{line.producto.precio_venta | currency}}</td>
+                    <td>{{line.lineTotal | currency}}</td>
+                    <td>
+                        <button class="btn btn-danger" (click)="deleteLine(index)">
+                            <i class="fa fa-trash"></i> Delete
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <span style="color:black">Total: </span>
+                        {{cart.price | currency}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<app-footer></app-footer>

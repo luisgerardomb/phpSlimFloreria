@@ -24,7 +24,7 @@
             return array(
                 'success' => true,
                 'description' => 'The productos were found',
-                'empleados' => $result
+                'productos' => $result
             );
         }
 
